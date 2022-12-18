@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 .section {
   width: 100vw;
+  max-width: 375px;
+  margin: 0 auto;
 }
 .section__carousel {
   width: 375px;
@@ -11,6 +13,8 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  transition-delay: 300ms;
 }
 .section__slide img {
   display: block;
@@ -21,6 +25,8 @@
 }
 .section__slide[data-active] {
   opacity: 1;
+  transition-delay: 0ms;
+  z-index: 1;
 }
 .section__carousel-btn {
   position: absolute;
@@ -31,6 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 .section__carousel-btn button {
   background-color: black;
@@ -38,6 +45,7 @@
   width: 3rem;
   border: none;
   padding-top: 0.1rem;
+  cursor: pointer;
 }
 .section__carousel-btn button img {
   border: none;
@@ -49,6 +57,34 @@
 .section__carousel-btn button:hover img {
   height: 32%;
 }
+.section__carousel-btn button:active img {
+  height: 30%;
+}
+.section__text {
+  width: 100%;
+  overflow: hidden;
+}
+.section__text ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 300%;
+  transition: all 300ms ease-in-out;
+}
+.section__text-carousel {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-now {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 0.75rem;
+  width: 100%;
+}
 
 body {
   margin: 0;
@@ -58,6 +94,10 @@ body {
   list-style: none;
   font-family: "League Spartan", sans-serif;
   height: 100vh;
+}
+
+ul {
+  list-style-type: none;
 }
 
 main {
