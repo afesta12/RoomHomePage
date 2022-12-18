@@ -8,13 +8,9 @@ $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
 $very-dark-grey: hsl(0, 0%, 27%);
 
-* {
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: $main-font;
+// Mixins
+@mixin transition-ease {
+    
+    transition: all 0.4s ease-in-out;
 
 }

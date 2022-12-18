@@ -1,1 +1,20 @@
-@import 'config';
+@import 'config', 'home';
+
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: $main-font;
+    height: 100vh;
+
+}
+
+main {
+
+    height: 100vh;
+    width: 100vw;
+
+}

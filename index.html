@@ -5,20 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Room homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./scss/main.css">
+  <title>Room Homepage</title>
 </head>
 <body>
-  Home
-  Shop
-  About
-  Contact
+
+<header>
+
+    <!-- Menu button -->
+    <div class="menu-btn">
+
+        <span class="menu-btn__burger"></span>
+
+    </div>
+
+    <div class="menu-logo">
+
+        <img src="./images/logo.svg" alt="Room Logo">
+
+    </div>
+
+    <!-- Nav Bar -->
+    <nav class="nav">
+
+        <ul class="menu-nav">
+
+            <li class="menu-nav__item">
+
+                <a href="" class="menu-nav__link">Home</a>
+
+            </li>
+            <li class="menu-nav__item">
+
+                <a href="" class="menu-nav__link">Shop</a>
+
+            </li>
+            <li class="menu-nav__item">
+
+                <a href="" class="menu-nav__link">About</a>
+
+            </li>
+            <li class="menu-nav__item">
+
+                <a href="" class="menu-nav__link">Contact</a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+</header>
+<main>
+
+    <section class="section">
+
+        <!-- Hero Image Carousel -->
+        <div class="section__carousel">
+
+            <ul>
+
+                <li class="section__slide" data-active>
+
+                    <img src="./images/mobile-image-hero-1.jpg" alt="White chairs and table setting">
+
+                </li>
+                <li class="section__slide">
+
+                    <img src="./images/mobile-image-hero-2.jpg" alt="Three colored chairs">
+
+                </li>
+                <li class="section__slide">
+
+                    <img src="./images/mobile-image-hero-3.jpg" alt="A single black chair">
+
+                </li>
+
+            </ul>
+
+            <!-- Carousel Buttons -->
+            <div class="section__carousel-btn">
+
+                <button>
+                    <img class="prev" src="./images/icon-angle-left.svg" alt="Left arrow">
+                </button>
+                
+                <button>
+                    <img class="next"src="./images/icon-angle-right.svg" alt="Right arrow">
+                </button>
+                
+                 
+            </div>
+        </div>
+
+    </section>
+
+</main>
 
   Discover innovative ways to decorate
 
@@ -51,9 +132,6 @@
   inspires you. Find the furniture pieces you need, from traditional to contemporary styles
   or anything in between. Product specialists are available to help you create your dream space.
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="./js/index.js"></script>
 </body>
 </html>
