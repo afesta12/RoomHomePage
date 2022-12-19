@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 .section {
   width: 100vw;
+  height: 100vh;
   max-width: 375px;
   margin: 0 auto;
 }
@@ -63,6 +64,10 @@
 .section__text {
   width: 100%;
   position: relative;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .section__text ul li {
   position: absolute;
