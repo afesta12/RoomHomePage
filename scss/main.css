@@ -62,24 +62,18 @@
 }
 .section__text {
   width: 100%;
-  overflow: hidden;
-  display: flex;
+  position: relative;
 }
-.section__text ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  width: 300%;
-  flex-shrink: 0;
+.section__text ul li {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  transition-delay: 20ms;
 }
-.section__text-carousel {
-  display: flex;
-  flex-basis: 33%;
-  flex-shrink: 0;
-  width: 33%;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+.section__text ul li[data-active] {
+  opacity: 1;
+  z-index: 1;
 }
 
 .shop-now {
