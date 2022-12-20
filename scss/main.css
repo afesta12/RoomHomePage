@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 .section {
   width: 100vw;
-  height: 100vh;
-  max-width: 375px;
+  height: 100%;
+  max-width: 380px;
   margin: 0 auto;
 }
 .section__carousel {
@@ -64,10 +64,7 @@
 .section__text {
   width: 100%;
   position: relative;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 50%;
 }
 .section__text ul li {
   position: absolute;
@@ -75,6 +72,9 @@
   opacity: 0;
   transition: opacity 300ms ease-in-out;
   transition-delay: 20ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section__text ul li[data-active] {
   opacity: 1;
@@ -83,10 +83,55 @@
 
 .shop-now {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   letter-spacing: 0.75rem;
   width: 100%;
+  position: absolute;
+  bottom: -5%;
+  left: 4%;
+}
+.shop-now div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.bottom {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+}
+
+.dark {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/image-about-dark.jpg);
+  margin-top: 4rem;
+}
+
+.light {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/image-about-light.jpg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+header {
+  display: none;
 }
 
 body {
@@ -101,6 +146,16 @@ body {
 
 ul {
   list-style-type: none;
+}
+
+p {
+  color: hsl(0deg, 0%, 63%);
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 main {

@@ -1,4 +1,4 @@
-@import 'config', 'home';
+@import 'config', 'home', 'menu';
 
 body {
 
@@ -15,6 +15,20 @@ body {
 ul {
 
     list-style-type: none
+
+}
+
+p {
+
+    color: $dark-grey;
+    line-height: 1.5rem;
+
+}
+
+h2 {
+
+    font-size: 2.5rem;
+    margin: 1.5rem 0 .5rem 0;
 
 }
 
