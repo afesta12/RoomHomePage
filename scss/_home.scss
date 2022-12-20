@@ -4,10 +4,12 @@
     height: 100%;
     max-width: 380px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     &__carousel {
 
-        width: 375px;
+        width: 100%;
         height: 360px;
         position: relative;
 
@@ -106,13 +108,16 @@
 
         width: 100%;
         position: relative;
-        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         ul {
 
             li {
 
                 position: absolute;
+                padding: 1rem 1rem 3rem 1rem;
                 inset: 0;
                 opacity: 0;
                 @include carousel;
@@ -141,30 +146,25 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     letter-spacing: .75rem;
     width: 100%;
-    position: absolute;
-    bottom: -5%;
-    left: 4%;
+    padding-left: 1rem;
 
     div {
 
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        width: 100%;
+        width: 75%;
+
+        img {
+
+            margin-left: 1rem;
+
+        }
 
     }
     
-
-}
-
-.bottom {
-
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    height: 100%;
 
 }
 
@@ -175,7 +175,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/image-about-dark.jpg);
-    margin-top: 4rem;
 
 }
 
@@ -189,12 +188,35 @@
 
 }
 
-.container {
+.wrapper {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    display: grid;
+    width: 100%;
+    align-self: center;
+
+}
+
+.top {
+
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.bottom {
+
+    margin-top: 1rem;
+    grid-template-rows: repeat(3, 1fr);
+
+    &__container {
+
+        padding: 1rem;
+
+    }
+
+    h4 {
+
+        letter-spacing: .35rem;
+
+    }
 
 }
