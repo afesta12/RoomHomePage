@@ -64,7 +64,6 @@ menuButton.addEventListener("click", () => {
         nav.classList.add('open');
         menuNav.classList.add('open')
         navItems.forEach(item => item.classList.add('open'));
-        body.classList.add('noscroll');
 
         showMenu = true;
 
@@ -74,7 +73,6 @@ menuButton.addEventListener("click", () => {
         nav.classList.remove('open');
         menuNav.classList.remove('open');
         navItems.forEach(item => item.classList.remove('open'));
-        body.classList.remove('noscroll');
 
         showMenu = false;
 
@@ -90,6 +88,7 @@ nav.addEventListener("click", () => {
         nav.classList.add('open');
         menuNav.classList.add('open')
         navItems.forEach(item => item.classList.add('open'));
+        body.classList.add('noscroll');
 
         showMenu = true;
 
@@ -99,6 +98,7 @@ nav.addEventListener("click", () => {
         nav.classList.remove('open');
         menuNav.classList.remove('open');
         navItems.forEach(item => item.classList.remove('open'));
+        body.classList.remove('noscroll');
 
         showMenu = false;
 
