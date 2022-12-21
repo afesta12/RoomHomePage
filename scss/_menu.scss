@@ -11,6 +11,7 @@
         left: 2rem;
         cursor: pointer;
         opacity: .8;
+        @include transition-ease;
     
         &__burger {
     
@@ -21,6 +22,7 @@
             right: 0;
             background: $white;
             border-radius: 10px;
+            @include transition-ease;
     
             &::before {
     
@@ -31,6 +33,7 @@
                 width: 25px;
                 height: 3px;
                 border-radius: 10px;
+                @include transition-ease;
     
             }
     
@@ -44,6 +47,30 @@
                 top: .5rem;
                 border-radius: 10px;
                 z-index: 10;
+                @include transition-ease;
+    
+            }
+
+            &.open {
+
+                transform: rotate(720deg);
+                background: transparent;
+    
+                &::before {
+    
+                    background: $dark-grey;
+                    transform: rotate(135deg);
+                    top: .5rem;
+    
+                }
+
+                &::after {
+
+                    background: $dark-grey;
+                    transform: rotate(45deg);
+                    width: 25px;
+
+                }
     
             }
     
@@ -77,40 +104,91 @@
 .nav {
 
     position: absolute;
-    z-index: 2;
+    z-index: 4;
+    overflow: hidden;
     top: -1rem;
     left: 0;
     width: 100vw;
     opacity: .96;
+    height: 110vh;
     visibility: hidden;
+    background-color: $dark-grey;
+    transform: translateX(-100%);
+    @include transition-ease;
+
+    &__wrapper {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+
+    }
 
     &.open {
 
         visibility: visible;
+        transform: translateX(0);
 
     }
 
     .menu-nav {
 
-        display: flex;
-        height: 20vh;
+        height: 7.5rem;
         background-color: $white;
-        width: 90%;
-        justify-content: space-around;
+        display: flex;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 1;
+        background-color: $white;
+        width: 92%;
         overflow: hidden;
         position: absolute;
+        transform: translateX(-100%);
+        @include transition-ease;
+
+        &.open {
+
+            transform: translateX(0);
+
+        }
+
+        &__item {
+
+            transform: translateY(-100%);
+            @include transition-ease;
+
+            &.open {
+
+                transform: translateY(0);
+
+            }
+
+        }
         
         li {
 
             a {
 
                 text-decoration: none;
+                color: $very-dark-grey;
 
             }
 
         }
 
+
+    }
+
+}
+
+// Delay menu items coming in
+@for $i from 1 through 4 {
+
+    .menu-nav__item:nth-child(#{$i}) {
+
+        transition-delay: ($i * 0.1s) + 0.15s;
 
     }
 

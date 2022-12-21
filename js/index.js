@@ -14,6 +14,9 @@ const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.menu-nav__item');
 
+// Body 
+const body = document.body;
+
 let showMenu = false;
 
 buttons.forEach(button => {
@@ -61,6 +64,7 @@ menuButton.addEventListener("click", () => {
         nav.classList.add('open');
         menuNav.classList.add('open')
         navItems.forEach(item => item.classList.add('open'));
+        body.classList.add('noscroll');
 
         showMenu = true;
 
@@ -69,7 +73,32 @@ menuButton.addEventListener("click", () => {
         hamburger.classList.remove('open');
         nav.classList.remove('open');
         menuNav.classList.remove('open');
-        navItems.forEach(item => item.classList.remove('open'))
+        navItems.forEach(item => item.classList.remove('open'));
+        body.classList.remove('noscroll');
+
+        showMenu = false;
+
+    }
+
+});
+
+nav.addEventListener("click", () => {
+
+    if(!showMenu) {
+
+        hamburger.classList.add('open');
+        nav.classList.add('open');
+        menuNav.classList.add('open')
+        navItems.forEach(item => item.classList.add('open'));
+
+        showMenu = true;
+
+    } else {
+
+        hamburger.classList.remove('open');
+        nav.classList.remove('open');
+        menuNav.classList.remove('open');
+        navItems.forEach(item => item.classList.remove('open'));
 
         showMenu = false;
 
