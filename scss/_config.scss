@@ -8,6 +8,14 @@ $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
 $very-dark-grey: hsl(0, 0%, 27%);
 
+// Prevent scrolling when nav menu is open on mobile
+.noscroll {
+
+    overflow-y: hidden;
+    position: fixed;
+
+}
+
 // Mixins
 @mixin transition-ease {
     
