@@ -295,7 +295,37 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+  .nav .menu-nav {
+    width: 100vw;
+  }
+  .section {
+    flex-direction: row;
+  }
+  .wrapper {
+    height: 100vh;
+  }
+  .wrapper.top {
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .bottom {
+    height: 100vh;
+    margin-top: 0;
+  }
+  .menu-logo {
+    left: 10rem;
+  }
+  .section__text ul li {
+    padding: 1rem;
+  }
+  .section__text ul li div h2 {
+    font-size: 1.5rem;
+  }
+  .section__text ul li div div p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 800px) {
   .menu-btn {
     visibility: hidden;
   }
@@ -326,6 +356,7 @@
   .section {
     height: 100vh;
     overflow: hidden;
+    flex-direction: column;
   }
   .section__text {
     justify-content: space-evenly;
@@ -349,11 +380,16 @@
        object-position: center;
   }
   .section__text-carousel {
-    padding: 0;
     margin-top: 3rem;
+  }
+  .section__text-carousel div {
+    padding: 2.5rem;
   }
   .section__text-carousel div h2 {
     font-size: 2rem;
+  }
+  .section__text-carousel div div {
+    padding: 0;
   }
   .section__text-carousel div div p {
     font-size: 0.8rem;
@@ -362,6 +398,7 @@
     height: 50%;
   }
   .wrapper {
+    height: 30vh;
     grid-template-rows: none;
   }
   .wrapper.top {
@@ -380,6 +417,9 @@
   }
   .bottom__img {
     background-size: contain;
+  }
+  .shop-now {
+    padding-left: 3.5rem;
   }
 }
 body {

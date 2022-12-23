@@ -1,3 +1,83 @@
+@include media-sm {
+
+    .nav {
+
+        .menu-nav {
+
+            width: 100vw;
+
+        }
+
+    }
+
+    .section {
+
+        flex-direction: row;
+
+    }
+
+    .wrapper {
+
+        height: 100vh;
+
+        &.top {
+
+            grid-template-rows: repeat(2, 1fr);
+
+        }
+
+    }
+
+    .bottom {
+
+        height: 100vh;
+        margin-top: 0;
+
+    }
+
+    .menu-logo {
+
+        left: 10rem;     
+
+    }
+
+
+    .section__text {
+
+        ul {
+
+            li {
+
+                padding: 1rem;
+
+                div {
+
+                    h2 {
+
+                        font-size: 1.5rem;
+
+                    }
+
+                    div {
+
+                        p {
+
+                            font-size: .8rem;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 @include media-md {
 
     .menu-btn {
@@ -50,6 +130,7 @@
 
         height: 100vh;
         overflow: hidden;
+        flex-direction: column;
 
         &__text {
 
@@ -92,11 +173,11 @@
 
         &__text-carousel {
 
-            padding: 0;
             margin-top: 3rem;
             
             div {
 
+                padding: 2.5rem;
                 h2 {
 
                     font-size: 2rem;
@@ -105,6 +186,7 @@
 
                 div {
 
+                    padding: 0;
                     p {
 
                         font-size: .8rem;
@@ -127,6 +209,7 @@
 
     .wrapper {
 
+        height: 30vh;
         grid-template-rows: none;
 
         &.top {
@@ -157,6 +240,12 @@
             
 
         }
+
+    }
+
+    .shop-now {
+
+        padding-left: 3.5rem;
 
     }
 }

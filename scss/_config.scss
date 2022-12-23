@@ -29,9 +29,19 @@ $very-dark-grey: hsl(0, 0%, 27%);
 
 }
 
+@mixin media-sm {
+    
+    @media screen and(min-width: 600px) {
+        
+        @content;
+
+    }
+
+}
+
 @mixin media-md {
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 800px) {
         
         @content;
 
