@@ -190,7 +190,7 @@
 .wrapper {
 
     display: grid;
-    width: 100%;
+    width: 100vw;
     align-self: center;
 
 }
@@ -198,6 +198,7 @@
 .top {
 
     grid-template-rows: 1fr 1.25fr;
+    width: 100vw;
 
 }
 

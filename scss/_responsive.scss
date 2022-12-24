@@ -19,6 +19,7 @@
     .wrapper {
 
         height: 100vh;
+        width: 100vw;
 
         &.top {
 
@@ -43,12 +44,15 @@
 
 
     .section__text {
+        
+        align-items: center;
 
         ul {
 
             li {
 
-                padding: 1rem;
+                padding: 0;
+                align-items: center;
 
                 div {
 
@@ -134,7 +138,7 @@
 
         &__text {
 
-            justify-content: space-evenly;
+            justify-content: space-around;
 
         }
 
@@ -173,11 +177,11 @@
 
         &__text-carousel {
 
-            margin-top: 3rem;
+            padding: 0;
             
             div {
 
-                padding: 2.5rem;
+                width: 70%;
                 h2 {
 
                     font-size: 2rem;
@@ -211,11 +215,12 @@
 
         height: 30vh;
         grid-template-rows: none;
+        width: 100%;
 
         &.top {
 
             grid-template-rows: none;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 60% 40%;
             height: 70vh;
     
         }
@@ -225,7 +230,6 @@
 
         grid-template-rows: none;
         grid-template-columns: 30% 40% 30%;
-        height: 30vh;
         margin-top: 0%;
 
         &__container {
@@ -245,7 +249,8 @@
 
     .shop-now {
 
-        padding-left: 3.5rem;
+        margin-top: 10rem;
+        width: 75%;
 
     }
 }

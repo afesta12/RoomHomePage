@@ -270,12 +270,13 @@
 
 .wrapper {
   display: grid;
-  width: 100%;
+  width: 100vw;
   align-self: center;
 }
 
 .top {
   grid-template-rows: 1fr 1.25fr;
+  width: 100vw;
 }
 
 .bottom {
@@ -304,6 +305,7 @@
   }
   .wrapper {
     height: 100vh;
+    width: 100vw;
   }
   .wrapper.top {
     grid-template-rows: repeat(2, 1fr);
@@ -315,8 +317,12 @@
   .menu-logo {
     left: 10rem;
   }
+  .section__text {
+    align-items: center;
+  }
   .section__text ul li {
-    padding: 1rem;
+    padding: 0;
+    align-items: center;
   }
   .section__text ul li div h2 {
     font-size: 1.5rem;
@@ -325,7 +331,7 @@
     font-size: 0.8rem;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .menu-btn {
     visibility: hidden;
   }
@@ -359,7 +365,7 @@
     flex-direction: column;
   }
   .section__text {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   .section__carousel {
     height: 100%;
@@ -380,10 +386,10 @@
        object-position: center;
   }
   .section__text-carousel {
-    margin-top: 3rem;
+    padding: 0;
   }
   .section__text-carousel div {
-    padding: 2.5rem;
+    width: 70%;
   }
   .section__text-carousel div h2 {
     font-size: 2rem;
@@ -400,16 +406,16 @@
   .wrapper {
     height: 30vh;
     grid-template-rows: none;
+    width: 100%;
   }
   .wrapper.top {
     grid-template-rows: none;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
     height: 70vh;
   }
   .bottom {
     grid-template-rows: none;
     grid-template-columns: 30% 40% 30%;
-    height: 30vh;
     margin-top: 0%;
   }
   .bottom__container {
@@ -419,7 +425,8 @@
     background-size: contain;
   }
   .shop-now {
-    padding-left: 3.5rem;
+    margin-top: 10rem;
+    width: 75%;
   }
 }
 body {

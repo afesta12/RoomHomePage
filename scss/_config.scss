@@ -41,7 +41,7 @@ $very-dark-grey: hsl(0, 0%, 27%);
 
 @mixin media-md {
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 900px) {
         
         @content;
 
