@@ -14,6 +14,12 @@
 
         flex-direction: row;
 
+        &__carousel {
+
+            margin-bottom: 1rem;
+
+        }
+
     }
 
     .wrapper {
@@ -23,7 +29,7 @@
 
         &.top {
 
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 1fr 2fr;
 
         }
 
@@ -31,7 +37,8 @@
 
     .bottom {
 
-        height: 100vh;
+        height: 100%;
+        overflow: visible;
         margin-top: 0;
 
     }
@@ -46,6 +53,7 @@
     .section__text {
         
         align-items: center;
+        margin-left: 1rem;
 
         ul {
 
@@ -80,7 +88,18 @@
 
     }
 
+    .shop-now {
+
+        div {
+
+            padding-top: 10rem;
+
+        }
+
+    }
+
 }
+
 
 @include media-md {
 
@@ -133,6 +152,7 @@
     .section {
 
         height: 100vh;
+        width: 100vw;
         overflow: hidden;
         flex-direction: column;
 

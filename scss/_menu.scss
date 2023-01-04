@@ -173,7 +173,13 @@
 
                 text-decoration: none;
                 color: $very-dark-grey;
+                @include transition-ease;
 
+                &:hover {
+
+                    color: $black;
+
+                }
             }
 
         }

@@ -125,6 +125,10 @@
 .nav .menu-nav li a {
   text-decoration: none;
   color: hsl(0deg, 0%, 27%);
+  transition: all 0.3s ease-in-out;
+}
+.nav .menu-nav li a:hover {
+  color: hsl(0deg, 0%, 0%);
 }
 
 .menu-nav__item:nth-child(1) {
@@ -303,15 +307,19 @@
   .section {
     flex-direction: row;
   }
+  .section__carousel {
+    margin-bottom: 1rem;
+  }
   .wrapper {
     height: 100vh;
     width: 100vw;
   }
   .wrapper.top {
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
   }
   .bottom {
-    height: 100vh;
+    height: 100%;
+    overflow: visible;
     margin-top: 0;
   }
   .menu-logo {
@@ -319,6 +327,7 @@
   }
   .section__text {
     align-items: center;
+    margin-left: 1rem;
   }
   .section__text ul li {
     padding: 0;
@@ -329,6 +338,9 @@
   }
   .section__text ul li div div p {
     font-size: 0.8rem;
+  }
+  .shop-now div {
+    padding-top: 10rem;
   }
 }
 @media screen and (min-width: 900px) {
@@ -361,6 +373,7 @@
   }
   .section {
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     flex-direction: column;
   }
